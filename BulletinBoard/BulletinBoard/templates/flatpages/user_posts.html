@@ -27,8 +27,8 @@
             {% endfor %}
             {% if is_paginated %}
                 {% if page_obj.has_previous %}
-                    <a class="btn btn-outline-info mb-4" href="?page=1">First</a>
-                    <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.previous_page_number }}">Previous</a>
+                    <a class="btn btn-outline-info mb-4" href="?page=1">В начало</a>
+                    <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.previous_page_number }}">Предыдущий</a>
                 {% endif %}
 
                 <!-- Show full number of pages -->
@@ -43,8 +43,8 @@
 
                 <!-- Show the last page -->
                 {% if page_obj.has_next %}
-                    <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.next_page_number }}">Next</a>
-                    <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
+                    <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.next_page_number }}">Следующий</a>
+                    <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.paginator.num_pages }}">Предыдущий</a>
                 {% endif %}
             {% endif %}
         </div>
@@ -53,10 +53,10 @@
             <h3>Our Sidebar</h3>
             <p class='text-muted'>You can put any information here you'd like.
               <ul class="list-group">
-                <li class="list-group-item list-group-item-light">Latest Posts</li>
-                <li class="list-group-item list-group-item-light">Announcements</li>
-                <li class="list-group-item list-group-item-light">Calendars</li>
-                <li class="list-group-item list-group-item-light">etc</li>
+                <li class="list-group-item list-group-item-light">Последние сообщения</li>
+                <li class="list-group-item list-group-item-light">Объявления</li>
+                <li class="list-group-item list-group-item-light">Календари</li>
+                <li class="list-group-item list-group-item-light">и т.д.</li>
               </ul>
             </p>
           </div>

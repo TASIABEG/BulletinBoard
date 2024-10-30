@@ -42,8 +42,8 @@
         {% load my_tags %}
             {% if is_paginated %}
                 {% if page_obj.has_previous %}
-                    <a class="btn btn-outline-info mb-4" href="?{% param_replace page=1 %}">First</a>
-                    <a class="btn btn-outline-info mb-4" href="{% param_replace page=page_obj.previous_page_number %}">Previous</a>
+                    <a class="btn btn-outline-info mb-4" href="?{% param_replace page=1 %}">В начало</a>
+                    <a class="btn btn-outline-info mb-4" href="{% param_replace page=page_obj.previous_page_number %}">Предыдущий</a>
                 {% endif %}
 
                 <!-- Show full number of pages -->
@@ -58,8 +58,8 @@
 
                 <!-- Show the last page -->
                 {% if page_obj.has_next %}
-                    <a class="btn btn-outline-info mb-4" href="?{% param_replace page=page_obj.next_page_number %}">Next</a>
-                    <a class="btn btn-outline-info mb-4" href="?{% param_replace page=page_obj.paginator.num_pages %}">Last</a>
+                    <a class="btn btn-outline-info mb-4" href="?{% param_replace page=page_obj.next_page_number %}">Следующий</a>
+                    <a class="btn btn-outline-info mb-4" href="?{% param_replace page=page_obj.paginator.num_pages %}">Предыдущий</a>
                 {% endif %}
             {% endif %}
 

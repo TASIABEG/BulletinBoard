@@ -22,30 +22,30 @@
     <header class="site-header">
       <nav class="navbar navbar-expand-md navbar-dark bg-success">
         <div class="container">
-          <a class="navbar-brand mb-1" href="{% url 'home' %}">Bulletin</a>
+          <a class="navbar-brand mb-1" href="{% url 'home' %}">Объявления</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarToggle">
             <div class="navbar-nav mr-auto">
-              <a class="nav-item nav-link" href="{% url 'home' %}">Home</a>
+              <a class="nav-item nav-link" href="{% url 'home' %}">Домой</a>
               <a class="nav-item nav-link" href="#">About</a>
             </div>
             <!-- Navbar Right Side -->
             <div class="navbar-nav">
                 {% if user.is_authenticated %}
-                <a class="nav-item nav-link" href="{% url 'user-posts' user.username %}">My Posts</a>
-                <a class="nav-item nav-link" href="{% url 'comment_list' %}">Comments</a>
-                <a class="nav-item nav-link" href="{% url 'bulletin-create' %}">New Post</a>
-                <a class="nav-item nav-link" href="{% url 'profile' %}">Profile</a>
+                <a class="nav-item nav-link" href="{% url 'user-posts' user.username %}">Мои посты</a>
+                <a class="nav-item nav-link" href="{% url 'comment_list' %}">Комментарии</a>
+                <a class="nav-item nav-link" href="{% url 'bulletin-create' %}">Новый пост</a>
+                <a class="nav-item nav-link" href="{% url 'profile' %}">Профиль</a>
                 <!-- Logout Form -->
                 <form method="POST" action="{% url 'logout' %}" style="display:inline;">
                     {% csrf_token %}
-                    <button type="submit" class="nav-item nav-link btn btn-link">Logout</button>
+                    <button type="submit" class="nav-item nav-link btn btn-link">Выйти</button>
                 </form>
                 {% else %}
-                  <a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
-                  <a class="nav-item nav-link" href="{% url 'register' %}">Register</a>
+                  <a class="nav-item nav-link" href="{% url 'login' %}">Войти</a>
+                  <a class="nav-item nav-link" href="{% url 'register' %}">Зарегистрироваться</a>
                 {% endif %}
             </div>
           </div>
